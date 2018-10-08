@@ -1,0 +1,12 @@
+{
+  "name": "KrumplisHal",
+  "version": "1.0.0",
+  "description": "Bud Spance and Terrance Hill shoutbox",
+  "main": "index.js",
+  "author": "Tamas Kuti",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
