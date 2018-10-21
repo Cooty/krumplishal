@@ -1,12 +1,19 @@
 {
   "name": "KrumplisHal",
   "version": "1.0.0",
-  "description": "Bud Spance and Terrance Hill shoutbox",
+  "description": "Bud Spance and Terrance Hill shoutbox content API",
   "main": "index.js",
   "author": "Tamas Kuti",
   "license": "MIT",
   "private": true,
+  "scripts": {
+    "watch": "nodemon ./app.js --ignore public/"
+  },
   "dependencies": {
+    "dotenv": "^6.0.0",
     "express": "^4.16.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.4"
   }
 }
