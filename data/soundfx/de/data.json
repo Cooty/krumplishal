@@ -1,0 +1,16 @@
+{
+    "type": "soundfx",
+    "lang": "de",
+    "data": [
+        {
+            "id": 1,
+            "title": "Zauberstab (Aladin)",
+            "media": "/media/soundfx/foo.mp3"
+        },
+        {
+            "id": 2,
+            "title": "Rauferei",
+            "media": "/media/soundfx/foobar.mp3"
+        }
+    ]
+}

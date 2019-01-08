@@ -1,17 +1,21 @@
 const express = require('express');
-// import environmental variables from our variables.env file
+const path = require('path');
+const routes = require('./routes/index');
+const errorHandlers = require('./handlers/errorHandlers');
+
 require('dotenv').config({ path: './variables.env' });
-const Content = require('./content');
 
 const app = express();
 
 app.disable('x-powered-by');
 
-app.get('/content', (req, res) => {
-  return res.json(Content);
-});
+app.use(express.static(path.join(__dirname, 'media')));
 
-console.log(process.env.PORT);
+app.use('/', routes);
+
+app.use(errorHandlers.notFound);
+
+app.use(errorHandlers.productionErrors);
 
 app.listen(
   process.env.PORT,

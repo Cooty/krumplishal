@@ -1,0 +1,9 @@
+{
+    "type": "gifs",
+    "data": [
+        {
+            "id": 1,
+            "media": "/media/gifs/foobar.mp4"
+        }
+    ]
+}

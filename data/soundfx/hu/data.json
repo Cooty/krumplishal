@@ -1,0 +1,16 @@
+{
+    "type": "soundfx",
+    "lang": "hu",
+    "data": [
+        {
+            "id": 1,
+            "title": "Varázslat (Aladin)",
+            "media": "/media/soundfx/foo.mp3"
+        },
+        {
+            "id": 2,
+            "title": "Bunyó háttérzaj",
+            "media": "/media/soundfx/foobar.mp3"
+        }
+    ]
+}

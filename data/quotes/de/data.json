@@ -1,0 +1,17 @@
+{
+    "type": "quotes",
+    "lang": "de",
+    "data": [
+        {
+            "id": 1,
+            "title": "Sehr witzische Zitat",
+            "media": "/media/quotes/de/bar.mp3"
+        },
+        {
+            "id": 2,
+            "title": "Auch ein sehr witzische Zitat",
+            "media": "/media/quotes/de/foo.mp3"
+
+        }
+    ] 
+}

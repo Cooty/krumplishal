@@ -1,0 +1,17 @@
+{
+    "type": "music",
+    "lang": "de",
+    "data": [
+        {
+            "id": 1,
+            "title": "Das Krokodil und sein Nilpferd",
+            "media": "/media/music/bar.mp3"
+        },
+        {
+            "id": 2,
+            "title": "Banana Joe",
+            "media": "/media/music/foo.mp3"
+        }
+    
+    ]
+}

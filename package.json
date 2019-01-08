@@ -7,7 +7,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "watch": "nodemon ./app.js --ignore public/"
+    "watch": "nodemon ./app.js"
   },
   "dependencies": {
     "dotenv": "^6.0.0",

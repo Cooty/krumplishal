@@ -1,0 +1,17 @@
+{
+    "type": "music",
+    "lang": "hu",
+    "data": [
+        {
+            "id": 1,
+            "title": "Szájharmonika (Én a vizilovakkal vagyok)",
+            "media": "/media/music/bar.mp3"
+        },
+        {
+            "id": 2,
+            "title": "Banános Joe",
+            "media": "/media/music/foo.mp3"
+        }
+    
+    ]
+}
