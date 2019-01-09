@@ -5,12 +5,16 @@
         {
             "id": 1,
             "title": "Szájharmonika (Én a vizilovakkal vagyok)",
-            "media": "/media/music/bar.mp3"
+            "media": "/media/music/bar.mp3",
+            "illustration": "foo.png",
+            "themeColor": "#ff0000"
         },
         {
             "id": 2,
             "title": "Banános Joe",
-            "media": "/media/music/foo.mp3"
+            "media": "/media/music/foo.mp3",
+            "illustration": "foo.png",
+            "themeColor": "#ff0000"
         }
     
     ]

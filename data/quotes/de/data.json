@@ -5,12 +5,16 @@
         {
             "id": 1,
             "title": "Sehr witzische Zitat",
-            "media": "/media/quotes/de/bar.mp3"
+            "media": "/media/quotes/de/bar.mp3",
+            "illustration": "foo.png",
+            "themeColor": "#ff0000"
         },
         {
             "id": 2,
             "title": "Auch ein sehr witzische Zitat",
-            "media": "/media/quotes/de/foo.mp3"
+            "media": "/media/quotes/de/foo.mp3",
+            "illustration": "foo.png",
+            "themeColor": "#ff0000"
 
         }
     ] 

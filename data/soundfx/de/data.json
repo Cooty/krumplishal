@@ -5,12 +5,16 @@
         {
             "id": 1,
             "title": "Zauberstab (Aladin)",
-            "media": "/media/soundfx/foo.mp3"
+            "media": "/media/soundfx/foo.mp3",
+            "illustration": "foo.png",
+            "themeColor": "#ff0000"
         },
         {
             "id": 2,
             "title": "Rauferei",
-            "media": "/media/soundfx/foobar.mp3"
+            "media": "/media/soundfx/foobar.mp3",
+            "illustration": "foo.png",
+            "themeColor": "#ff0000"
         }
     ]
 }
