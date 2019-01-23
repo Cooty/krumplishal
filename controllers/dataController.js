@@ -3,6 +3,7 @@ const { promisify } = require('util');
 const { singleItemHandler } = require('../handlers/dataHandlers');
 const dataFolder = `${__dirname}/../data`;
 const readFileAsync = promisify(fs.readFile);
+const { getLang } = require('../services/langService');
 
 const getJSONFile = async (path = '') => {
     try {
@@ -28,28 +29,72 @@ exports.gifById = async (req, res) => {
     const id = parseInt(req.params.id);
     const gifs = await getJSONFile(`${dataFolder}/gifs/data.json`);
 
-    const data = gifs.data;
-    const gif = data.find((item) => {
+    const gif = gifs.data.find((item) => {
         return item.id === id;
     });
 
     return singleItemHandler(gif, res);
 }
 
-exports.music = (req, res) => {
-    res.json({
-        music: 'it works!'
-    });
+exports.music = async (req, res) => {
+    const lang = getLang(req.params.lang);
+
+    const music = await getJSONFile(`${dataFolder}/music/${lang}/data.json`);
+
+    return res.json(music);
 };
 
-exports.quotes = (req, res) => {
-    res.json({
-        quotes: 'it works!'
+exports.musicTrackById = async (req, res) => {
+    const id = parseInt(req.params.id);
+    const lang = getLang(req.params.lang);
+
+    const music = await getJSONFile(`${dataFolder}/music/${lang}/data.json`);
+
+    const musicTrack = music.data.find((item) => {
+        return item.id === id;
     });
+
+    return singleItemHandler(musicTrack, res);
 };
 
-exports.soundfx = (req, res) => {
-    res.json({
-        soundfx: 'it works!'
+exports.quotes = async (req, res) => {
+    const lang = getLang(req.params.lang);
+
+    const quotes = await getJSONFile(`${dataFolder}/quotes/${lang}/data.json`);
+
+    return res.json(quotes);
+};
+
+exports.quoteById = async (req, res) => {
+    const id = parseInt(req.params.id);
+    const lang = getLang(req.params.lang);
+
+    const quotes = await getJSONFile(`${dataFolder}/quotes/${lang}/data.json`);
+
+    const quote = quotes.data.find((item) => {
+        return item.id === id;
     });
+
+    return singleItemHandler(quote, res);
+};
+
+exports.soundfxs = async (req, res) => {
+    const lang = getLang(req.params.lang);
+
+    const soundfxs = await getJSONFile(`${dataFolder}/soundfxs/${lang}/data.json`);
+
+    return res.json(soundfxs);
+};
+
+exports.soundfxById = async (req, res) => {
+    const id = parseInt(req.params.id);
+    const lang = getLang(req.params.lang);
+
+    const soundfxs = await getJSONFile(`${dataFolder}/quotes/${lang}/data.json`);
+
+    const soundfx = soundfxs.data.find((item) => {
+        return item.id === id;
+    });
+
+    return singleItemHandler(soundfx, res);
 };

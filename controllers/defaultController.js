@@ -3,10 +3,10 @@ exports.index= (req, res) => {
         gifs: '/gifs',
         gifById: '/gif/:id',
         music: '/music/:lang',
-        musicById: '/music/:lang/:id',
+        musicTrackById: '/music-track/:lang/:id',
         quotes: '/quotes/:lang',
-        quoteById: '/quotes/:lang/:id',
-        soundfx: '/soundfx/:lang',
+        quoteById: '/quote/:lang/:id',
+        soundfx: '/soundfxs/:lang',
         soundfxById: '/soundfx/:lang/:id',
     });
 }

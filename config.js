@@ -1,5 +1,6 @@
 const Config = {
-  defaultLang: 'hu'
+  defaultLang: 'hu',
+  languages: [this.defaultLang, 'de']
 };
 
 module.exports = Config;
