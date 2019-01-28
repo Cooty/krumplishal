@@ -1,23 +1,8 @@
-const fs = require('fs');
-const { promisify } = require('util');
 const { singleItemHandler } = require('../handlers/dataHandlers');
 const dataFolder = `${__dirname}/../data`;
-const readFileAsync = promisify(fs.readFile);
+
 const { getLang } = require('../services/langService');
-
-const getJSONFile = async (path = '') => {
-    try {
-        const file = await readFileAsync(
-            path,
-            { encoding: 'utf-8' }
-        );
-
-        return JSON.parse(file);
-    } catch (error) {
-        throw error;
-    }
-
-};
+const { getJSONFile } = require('../services/fileService');
 
 exports.gifs = async (req, res) => {
     const gifs = await getJSONFile(`${dataFolder}/gifs/data.json`);
