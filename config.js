@@ -3,11 +3,11 @@ class Config {
     if(!Config.instance) {
        Config.instance = this;
     }
-    
-    languages = ['hu', 'de'];
-    defaultLang = this.languages[0];
 
-    themeColors = [
+    this.languages = ['hu', 'de'];
+    this.defaultLang = this.languages[0];
+
+    this.themeColors = [
       {
         name: 'red',
         code: '#ff0000'
