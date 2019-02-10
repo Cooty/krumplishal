@@ -1,6 +1,4 @@
 {
-    "type": "quotes",
-    "lang": "hu",
     "data": [
         {
             "id": 1,
@@ -16,5 +14,5 @@
             "illustration": "foo.png",
             "themeColor": "#ff0000"
         }
-    ] 
+    ]
 }

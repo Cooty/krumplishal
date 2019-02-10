@@ -1,6 +1,4 @@
 {
-    "type": "music",
-    "lang": "de",
     "data": [
         {
             "id": 1,
@@ -16,6 +14,6 @@
             "illustration": "banana-joe-music.png",
             "themeColor": "#ff0000"
         }
-    
+
     ]
 }

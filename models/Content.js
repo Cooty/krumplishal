@@ -1,30 +1,18 @@
 const uuid = require('uuid/v1');
 
 export default class Content {
-    
-    id = uuid();
 
-    type = '';
+    constructor(data = {}) {
+        this.id = uuid();
 
-    themeColor = '';
+        this.type = data.type;
 
-    getId() {
-        return this.id;
-    }
+        this.themeColor = data.themeColor;
 
-    setType(type) {
-        this.type = type;
-    }
+        this.media = data.media;
 
-    getType() {
-        return this.type;
-    }
+        this.illustration = data.illustration;
 
-    setThemeColor(themeColor) {
-        this.themeColor = themeColor;
-    }
-
-    getThemeColor() {
-        return this.themeColor;
+        this.title = data.title;
     }
 }
