@@ -4,15 +4,9 @@ const dataFolder = `${__dirname}/../data`;
 const { getLang } = require('../services/langService');
 const { getJSONFile } = require('../services/fileService');
 
-exports.gifs = async (req, res) => {
-    const gifs = await getJSONFile(`${dataFolder}/gifs/data.json`);
-
-    return res.json(gifs);
-};
-
 exports.gifById = async (req, res) => {
     const id = parseInt(req.params.id);
-    const gifs = await getJSONFile(`${dataFolder}/gifs/data.json`);
+    const gifs = await getJSONFile(`${dataFolder}/gif/data.json`);
 
     const gif = gifs.data.find((item) => {
         return item.id === id;
@@ -21,13 +15,31 @@ exports.gifById = async (req, res) => {
     return singleItemHandler(gif, res);
 }
 
-exports.music = async (req, res) => {
+////////////////////////////////////////
+exports.entityList = async (req, res)=> {
+    const path = req.params.lang ?
+        `${dataFolder}/${req.params.entityName}/${getLang(req.params.lang)}` :
+        `${dataFolder}/${req.params.entityName}`;
+
+    const list = await getJSONFile(`${path}/data.json`);
+
+    return res.json(list);
+};
+
+exports.entityById = async (req, res)=> {
+    const id = parseInt(req.params.id);
     const lang = getLang(req.params.lang);
 
     const music = await getJSONFile(`${dataFolder}/music/${lang}/data.json`);
 
-    return res.json(music);
+    const musicTrack = music.data.find((item) => {
+        return item.id === id;
+    });
+
+    return singleItemHandler(musicTrack, res);
 };
+///////////////////////////////////////
+
 
 exports.musicTrackById = async (req, res) => {
     const id = parseInt(req.params.id);
@@ -42,14 +54,6 @@ exports.musicTrackById = async (req, res) => {
     return singleItemHandler(musicTrack, res);
 };
 
-exports.quotes = async (req, res) => {
-    const lang = getLang(req.params.lang);
-
-    const quotes = await getJSONFile(`${dataFolder}/quotes/${lang}/data.json`);
-
-    return res.json(quotes);
-};
-
 exports.quoteById = async (req, res) => {
     const id = parseInt(req.params.id);
     const lang = getLang(req.params.lang);
@@ -61,14 +65,6 @@ exports.quoteById = async (req, res) => {
     });
 
     return singleItemHandler(quote, res);
-};
-
-exports.soundfxs = async (req, res) => {
-    const lang = getLang(req.params.lang);
-
-    const soundfxs = await getJSONFile(`${dataFolder}/soundfxs/${lang}/data.json`);
-
-    return res.json(soundfxs);
 };
 
 exports.soundfxById = async (req, res) => {
