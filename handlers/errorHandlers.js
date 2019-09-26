@@ -35,8 +35,6 @@ const getErrorMessage = (statusCode) => statusCode === 404 ? 'Not found' : 'Inte
 exports.productionErrors = (err, req, res, next) => {
     const statusCode = setStatusCode(err.status);
 
-    console.log(err);
-
     res.status(statusCode);
     
     return res.json({

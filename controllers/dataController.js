@@ -21,10 +21,6 @@ exports.entityById = async (req, res)=> {
 
     const list = await getJSONFile(`${path}/data.json`);
 
-    console.log(list);
-
-    console.log(req.params.id);
-
     const dataItem = list.data.find((item) => {
         return item.id === parseInt(req.params.id, 10);
     });
