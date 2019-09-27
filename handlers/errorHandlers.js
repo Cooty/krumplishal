@@ -1,3 +1,5 @@
+const statusCodes = require('status-codes');
+
 /*
   Catch Errors Handler
 
@@ -18,14 +20,30 @@ Not Found Error Handler
 If we hit a route that is not found, we mark it as 404 and pass it along to the next error handler to display
 */
 exports.notFound = (req, res, next) => {
-    const err = new Error('Not Found');
-    err.status = 404;
+    const err = new Error(statusCodes.NOT_FOUND.name);
+    err.status = statusCodes.NOT_FOUND.status;
 
     return next(err);
 };
 
-const setStatusCode = (status) => status || 500;
-const getErrorMessage = (statusCode) => statusCode === 404 ? 'Not found' : 'Internal Server Error';
+const setStatusCode = (status) => status || statusCodes.NOT_FOUND.status;
+const getErrorMessage = (statusCode) => statusCode === statusCodes.NOT_FOUND.status ? 
+    statusCodes.NOT_FOUND.name : 
+    statusCodes.INTERNAL_SERVER_ERROR.name;
+
+exports.developmentErrors = (err, req, res, next) => {
+    const statusCode = setStatusCode(err.status);
+    
+    err.stack = err.stack || '';
+
+    res.status(statusCode);
+    
+    return res.json({
+        message: getErrorMessage(statusCode),
+        statusCode: statusCode,
+        stackTracke: err.stack
+    });
+};
 
 /*
   Production Error Handler

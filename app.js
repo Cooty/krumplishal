@@ -15,7 +15,9 @@ app.use('/', routes);
 
 app.use(errorHandlers.notFound);
 
-app.use(errorHandlers.productionErrors);
+const errorHandler = app.get('env') === 'dev' ? errorHandlers.developmentErrors : errorHandlers.productionErrors;
+
+app.use(errorHandler);
 
 app.listen(
   process.env.PORT,
