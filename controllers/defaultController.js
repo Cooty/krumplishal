@@ -1,12 +1,12 @@
 exports.index= (req, res) => {
     return res.json({
-        gifs: '/gifs',
+        gifs: '/gif/list',
         gifById: '/gif/:id',
-        music: '/music/:lang',
-        musicTrackById: '/music-track/:lang/:id',
-        quotes: '/quotes/:lang',
+        music: '/music/:lang/list',
+        musicById: '/music/:lang/:id',
+        quotes: '/quote/:lang/list',
         quoteById: '/quote/:lang/:id',
-        soundfx: '/soundfxs/:lang',
+        soundfx: '/soundfx/:lang/list',
         soundfxById: '/soundfx/:lang/:id',
     });
 }
