@@ -1,4 +1,4 @@
-const { singleItemHandler } = require('../handlers/dataHandlers');
+const { singleItemHandler } = require('../handlers/data-handlers');
 const dataFolder = `${__dirname}/../data`;
 
 const { getLang } = require('../services/langService');

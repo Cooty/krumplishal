@@ -1,9 +1,9 @@
 const express = require('express');
 const path = require('path');
 const routes = require('./routes/index');
-const errorHandlers = require('./handlers/errorHandlers');
+const errorHandlers = require('./handlers/error-handlers');
 
-require('dotenv').config({ path: './variables.env' });
+require('dotenv').config({path: './variables.env'});
 
 const app = express();
 
@@ -20,6 +20,6 @@ const errorHandler = app.get('env') === 'dev' ? errorHandlers.developmentErrors 
 app.use(errorHandler);
 
 app.listen(
-  process.env.PORT,
-  () => console.log(`KrumplisHal is listening on localhost:${process.env.PORT}`)
+    process.env.PORT,
+    () => console.log(`KrumplisHal is listening on localhost:${process.env.PORT}`)
 );
