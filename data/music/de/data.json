@@ -5,14 +5,14 @@
             "title": "Das Krokodil und sein Nilpferd",
             "media": "/media/music/bar.mp3",
             "illustration": "foo.png",
-            "themeColor": "#ff0000"
+            "themeColor": "RED"
         },
         {
             "id": 2,
             "title": "Banana Joe",
             "media": "/media/music/foo.mp3",
             "illustration": "banana-joe-music.png",
-            "themeColor": "#ff0000"
+            "themeColor": "BLUE"
         }
 
     ]

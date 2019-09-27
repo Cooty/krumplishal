@@ -5,14 +5,14 @@
             "title": "Te mondod, hogy kezeket fel, a te hangod mélyebb",
             "media": "/media/quotes/hu/bar.mp3",
             "illustration": "foo.png",
-            "themeColor": "#ff0000"
+            "themeColor": "BLUE"
         },
         {
             "id": 2,
             "title": "Csak a Puffin adhat erőt és mindent lebíró akaratot",
             "media": "/media/quotes/hu/foo.mp3",
             "illustration": "foo.png",
-            "themeColor": "#ff0000"
+            "themeColor": "RED"
         }
     ]
 }

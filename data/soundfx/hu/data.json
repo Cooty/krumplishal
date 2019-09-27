@@ -5,14 +5,14 @@
             "title": "Varázslat (Aladin)",
             "media": "/media/soundfx/foo.mp3",
             "illustration": "foo.png",
-            "themeColor": "#ff0000"
+            "themeColor": "BLUE"
         },
         {
             "id": 2,
             "title": "Bunyó háttérzaj",
             "media": "/media/soundfx/foobar.mp3",
             "illustration": "foo.png",
-            "themeColor": "#ff0000"
+            "themeColor": "RED"
         }
     ]
 }
