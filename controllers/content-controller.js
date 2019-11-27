@@ -4,7 +4,32 @@ const dataFolder = `${__dirname}/../data`;
 const { getLang } = require('../services/langService');
 const { getJSONFile } = require('../services/fileService');
 
+const contentTypes = require('../enum/content-types');
+
+const statusCodes = require('status-codes');
+
 exports.entityList = async (req, res)=> {
+    // if() {
+
+    // }
+    const keys = Object.keys(contentTypes);
+
+    console.log(keys);
+
+    const contentTypeValues = keys.map(key => {
+        return contentTypes[key];
+    });
+
+    console.log(contentTypeValues);
+    console.log(contentTypeValues.indexOf(req.params.entityName));
+
+    if(contentTypeValues.indexOf(req.params.entityName) < 0) {
+        const err = new Error(statusCodes.NOT_FOUND.name);
+        err.status = statusCodes.NOT_FOUND.status;
+
+        throw err;
+    }
+
     const path = req.params.lang ?
         `${dataFolder}/${req.params.entityName}/${getLang(req.params.lang)}` :
         `${dataFolder}/${req.params.entityName}`;

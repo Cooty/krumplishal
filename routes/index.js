@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const dataController = require('../controllers/data-controller');
+const dataController = require('../controllers/content-controller');
 const defaultController = require('../controllers/default-controller');
 const {catchErrors} = require('../handlers/error-handlers');
 

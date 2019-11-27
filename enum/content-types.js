@@ -1,7 +1,7 @@
 const contentTypes = {
     GIF: 'gif',
     MUSIC: 'music',
-    QUOTE: 'quotes',
+    QUOTE: 'quote',
     SOUNDFX: 'soundfx'
 };
 

@@ -7,21 +7,6 @@ class Config {
     this.languages = ['hu', 'de'];
     this.defaultLang = this.languages[0];
 
-    this.themeColors = [
-      {
-        name: 'red',
-        code: '#ff0000'
-      },
-      {
-        name: 'green',
-        code: '#00ff00'
-      },
-      {
-        name: 'blue',
-        code: '#0000ff'
-      }
-    ];
-
     return Config.instance;
   }
 }
